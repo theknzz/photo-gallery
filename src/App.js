@@ -1,15 +1,13 @@
 import React from 'react';
-import Header from './components/Header'
-import Searcher from "./components/Searcher";
-import Results from "./components/Results";
+import PhotoContextProvider from "./context/PhotoContext";
+import Gallery from "./components/Gallery";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
-      <>
-        <Header />
-        <Searcher />
-        <Results />
-      </>
+          <PhotoContextProvider>
+            <Gallery/>
+          </PhotoContextProvider>
   );
 }
 
